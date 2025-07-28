@@ -1,0 +1,153 @@
+.menubar-box {
+  background-color: rgb(25, 27, 31);
+  border-bottom: 0.1rem solid rgb(60, 61, 65);
+  width: 100%;
+  height: 68px;
+  display: grid;
+  grid-template-columns: var(--menubar-set01-size) 1fr var(--menubar-set03-size);
+  padding: 0 16px;
+
+  .menubar-set-01 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .logo {
+      width: 32px;
+      display: block;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
+
+  .menubar-set-02 {
+    margin: auto 0;
+
+    .menubar-link {
+      font-family: var(--me-font-content);
+      color: rgb(124, 124, 124) !important;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 0.4rem;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .active-link {
+      background-color: rgba(77, 77, 77, 0.498) !important;
+      color: #ffffff !important;
+    }
+
+    .menubar-link-center {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .menubar-link-left {
+      border-left: 2px solid #555555;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start !important;
+      gap: 14px;
+      padding-left: 20px;
+    }
+
+    .menubar-link-right {
+      border-right: 2px solid #555555;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end !important;
+      gap: 14px;
+      padding-right: 20px;
+    }
+  }
+
+  .menubar-set-03 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+
+.menubar-resizable {
+  background-color: rgb(25, 27, 31);
+  border-bottom: 0.1rem solid rgb(60, 61, 65);
+  width: 100%;
+  height: 68px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+
+  .menubar-set-01 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .menubar-logo {
+      width: 32px;
+      display: block;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
+
+  .menubar-set-02 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    .btn-icon {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .menubar-profile-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+
+      .profile-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        .profile-name {
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        .profile-role {
+          color: #b9b9b9;
+        }
+      }
+    }
+  }
+}
+
+#menubar-thumb {
+  font-size: 2.6rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -9,8 +9,9 @@
   }
 
   #app-header {
+    background-color: var(--app-header-bg);
     border-bottom: 1px solid var(--app-header-bdr);
-    height: 6rem;
+    height: var(--layout-adjustment);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,21 +35,23 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
+      
       a {
         text-decoration: none;
+        color: var(--list-card-font);
       }
 
       .app-module-active {
+        color: var(--app-active-link);
         position: relative;
 
         &:before {
           content: "";
           position: absolute;
-          bottom: -0.8rem;
+          bottom: -2.6rem;
           left: 50%;
           transform: translateX(-50%);
-          width: 1.8rem;
+          width: 60%;
           height: 0.3rem;
           border-radius: 10rem;
           background-color: var(--app-active-link);
@@ -89,8 +92,8 @@
   // }
 
   #app-body {
-    height: calc(100dvh - 6rem);
-    overflow: auto;
+    height: calc(100dvh - var(--layout-adjustment));
+    overflow: hidden;
   }
 }
 

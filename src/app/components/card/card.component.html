@@ -13,15 +13,9 @@
 
   <div class="app-components-box">
     <div>
-      <h2 class="comp-title">Responsive & Fixed width card</h2>
+      <h2 class="comp-title">Fixed width card</h2>
       <div class="grid-auto-adjust">
-        <div
-          [class]="
-            themeService.isDarkMode === true
-              ? 'card-box card-fixed cf-dark'
-              : 'card-box card-fixed'
-          "
-        >
+        <div class="card-box card-fixed">
           <div class="card-head">
             <div class="card-title">
               <h3>Welcome to CardBox</h3>
@@ -54,47 +48,51 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-01'"></app-comps-code>
+      </div>
+    </div>
 
-        <div
-          [class]="
-            themeService.isDarkMode === true ? 'card-box cf-dark' : 'card-box'
-          "
-        >
-          <div class="card-head">
-            <div class="card-title">
-              <h3>Welcome to CardBox</h3>
-              <small>Fixed Width</small>
-            </div>
-          </div>
-          <div class="card-body">
-            <p>
-              CardBox is a versatile card component for your frontend projects.
-              It is designed to be customizable and easy to use. You can use it
-              for displaying information, images, and actions in a structured
-              way.
-            </p>
-            <ul>
-              <li>Responsive design</li>
-              <li>Customizable with themes</li>
-              <li>Lightweight and efficient</li>
-              <li>Full width and Fixed with classes</li>
-              <li>Build-In Colours</li>
-              <li>Chart Cards</li>
-            </ul>
-          </div>
-          <div class="card-footer">
-            <button type="button" class="btn-fill-green">
-              <span class="btn-txt">Get Start</span>
-              <span class="material-symbols-outlined btn-icon"> flag </span>
-            </button>
-            <button type="button" class="btn-fill-violet">
-              <span class="btn-txt">Learn More</span>
-              <span class="material-symbols-outlined btn-icon">
-                keyboard_double_arrow_right
-              </span>
-            </button>
+    <div>
+      <h2 class="comp-title">Responsive card</h2>
+      <div class="card-box">
+        <div class="card-head">
+          <div class="card-title">
+            <h3>Welcome to CardBox</h3>
+            <small>Fixed Width</small>
           </div>
         </div>
+        <div class="card-body">
+          <p>
+            CardBox is a versatile card component for your frontend projects. It
+            is designed to be customizable and easy to use. You can use it for
+            displaying information, images, and actions in a structured way.
+          </p>
+          <ul>
+            <li>Responsive design</li>
+            <li>Customizable with themes</li>
+            <li>Lightweight and efficient</li>
+            <li>Full width and Fixed with classes</li>
+            <li>Build-In Colours</li>
+            <li>Chart Cards</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn-fill-green">
+            <span class="btn-txt">Get Start</span>
+            <span class="material-symbols-outlined btn-icon"> flag </span>
+          </button>
+          <button type="button" class="btn-fill-violet">
+            <span class="btn-txt">Learn More</span>
+            <span class="material-symbols-outlined btn-icon">
+              keyboard_double_arrow_right
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-02'"></app-comps-code>
       </div>
     </div>
 
@@ -128,19 +126,15 @@
           </div>
         </ng-container>
       </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-03'"></app-comps-code>
+      </div>
     </div>
 
     <div>
       <h2 class="comp-title margin-t">Bordered Card Plain</h2>
       <div class="grid-auto-adjust">
-        <!-- <div [class]="themeService.isDarkMode === true ? 'card-box cf-dark' : 'card-box'"></div> -->
-        <div
-          [class]="
-            themeService.isDarkMode === true
-              ? 'card-box card-fixed card-lines cf-dark'
-              : 'card-box card-fixed card-lines'
-          "
-        >
+        <div class="card-box card-fixed card-lines">
           <div class="card-head">
             <div class="card-title">
               <h3>Welcome to CardBox</h3>
@@ -171,6 +165,9 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-04'"></app-comps-code>
       </div>
     </div>
 
@@ -207,6 +204,9 @@
           </div>
         </ng-container>
       </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-05'"></app-comps-code>
+      </div>
     </div>
 
     <div>
@@ -226,6 +226,9 @@
             </div>
           </ng-container>
         </div>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'card-06'"></app-comps-code>
       </div>
     </div>
   </div>

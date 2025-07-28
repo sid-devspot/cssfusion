@@ -22,6 +22,7 @@ import { TemplatesModule } from './templates/templates.module';
 import { TemplatesRoutingModule } from './templates/templates-routing.module';
 import { MotionModule } from './motion/motion.module';
 import { MotionRoutingModule } from './motion/motion-routing.module';
+import { CssFusionModule } from '@dev.spot/css-fusion';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -40,6 +41,7 @@ import { MotionRoutingModule } from './motion/motion-routing.module';
     TemplatesRoutingModule,
     MotionModule,
     MotionRoutingModule,
+    CssFusionModule
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

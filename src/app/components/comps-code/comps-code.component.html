@@ -149,6 +149,7 @@ $colors: (
   </div>
 </div>
 
+<!-- Accordion -->
 <div *ngIf="showCode === 'accordion-01'">
   <div class="code-box">
     <header>
@@ -445,6 +446,489 @@ export class AccordionComponent implements OnInit &#123;
 &lt;div class="acc-body"&gt; &lt;/div&gt; &lt;!-- Accordion Body --&gt;
 &lt;div class="acc-body acc-open"&gt; &lt;/div&gt; &lt;!-- Default Expand --&gt;
 &lt;div class="acc-content"&gt; &lt;/div&gt; &lt;!-- Accordion Body Content container  --&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div *ngIf="showCode === 'btn-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(btn01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #btn01>
+&lt;button type="button" class="btn-line btn-line"&gt;Regular Button&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-line"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-line"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Edit&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-line"&gt;
+  &lt;span class="btn-txt"&gt;Create&lt;/span&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; add_circle &lt;/span&gt;
+&lt;/button&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'btn-02'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(btn02)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #btn02>
+&lt;button type="button" class="btn-fill-gray"&gt;Gray&lt;/button&gt;
+&lt;button type="button" class="btn-fill-yellow"&gt;Yellow&lt;/button&gt;
+&lt;button type="button" class="btn-fill-green"&gt;Green&lt;/button&gt;
+&lt;button type="button" class="btn-fill-orange"&gt;Orange&lt;/button&gt;
+&lt;button type="button" class="btn-fill-blue"&gt;Blue&lt;/button&gt;
+&lt;button type="button" class="btn-fill-violet"&gt;Violet&lt;/button&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'btn-03'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(btn03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #btn03>
+&lt;button type="button" class="btn-line-yellow"&gt;Yellow&lt;/button&gt;
+&lt;button type="button" class="btn-line-green"&gt;Green&lt;/button&gt;
+&lt;button type="button" class="btn-line-orange"&gt;Orange&lt;/button&gt;
+&lt;button type="button" class="btn-line-blue"&gt;Blue&lt;/button&gt;
+&lt;button type="button" class="btn-line-violet"&gt;Violet&lt;/button&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'btn-04'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(btn04)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #btn04>
+&lt;button type="button" class="btn-fill btn-round"&gt;Round Button&lt;/button&gt;
+&lt;button type="button" class="btn-fill btn-round"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-fill btn-round"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Round Button&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-round"&gt;Round Button&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-round"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-line btn-round"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Round Button&lt;/span&gt;
+&lt;/button&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'btn-05'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(btn05)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #btn05>
+&lt;button type="button" class="btn-iconTxt-gray"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; edit &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Edit&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-iconTxt-yellow"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; add_circle &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Create&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-iconTxt-green"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; done_all &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Added&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-iconTxt-orange"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; delete &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Delete&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-iconTxt-blue"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; thumb_up &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Liked&lt;/span&gt;
+&lt;/button&gt;
+&lt;button type="button" class="btn-iconTxt-violet"&gt;
+  &lt;span class="material-symbols-outlined btn-icon"&gt; settings &lt;/span&gt;
+  &lt;span class="btn-txt"&gt;Settings&lt;/span&gt;
+&lt;/button&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Card -->
+<div *ngIf="showCode === 'card-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card01>
+&lt;div class="card-box card-fixed"&gt;
+  &lt;div class="card-head"&gt;
+    &lt;div class="card-title"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+  &lt;div class="card-footer"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'card-02'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card02)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card02>
+&lt;div class="card-box"&gt;
+  &lt;div class="card-head"&gt;
+    &lt;div class="card-title"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+  &lt;div class="card-footer"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'card-03'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card03>
+&lt;div class="card-box-yellow card-fixed"&gt;...&lt;/div&gt;
+&lt;div class="card-box-green card-fixed"&gt;...&lt;/div&gt;
+&lt;div class="card-box-orange card-fixed"&gt;...&lt;/div&gt;
+&lt;div class="card-box-blue card-fixed"&gt;...&lt;/div&gt;
+&lt;div class="card-box-violet card-fixed"&gt;...&lt;/div&gt;
+&lt;div class="card-box-gray card-fixed"&gt;...&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'card-04'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card04)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card04>
+&lt;div class="card-box card-fixed card-lines"&gt;
+  &lt;div class="card-head"&gt;
+    &lt;div class="card-title"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+  &lt;div class="card-footer"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'card-05'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card03>
+&lt;div class="card-box-yellow card-fixed card-lines-yellow"&gt;...&lt;/div&gt;
+&lt;div class="card-box-green card-fixed card-lines-green"&gt;...&lt;/div&gt;
+&lt;div class="card-box-orange card-fixed card-lines-orange"&gt;...&lt;/div&gt;
+&lt;div class="card-box-blue card-fixed card-lines-blue"&gt;...&lt;/div&gt;
+&lt;div class="card-box-violet card-fixed card-lines-violet"&gt;...&lt;/div&gt;
+&lt;div class="card-box-gray card-fixed card-lines-gray"&gt;...&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'card-06'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(card03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #card03>
+&lt;div class="chart-cards"&gt;
+  &lt;div class="card-box-yellow card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-box-green card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-box-orange card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-box-blue card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-box-violet card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="card-box-gray card-fixed"&gt;
+    &lt;div class="card-head"&gt;
+      &lt;div class="card-title"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;p class="chart-num"&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Menubar -->
+<div *ngIf="showCode === 'menubar-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(menubar01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #menubar01>
+&lt;header class="menubar-box"&gt;
+  &lt;div class="menubar-set-01"&gt;
+    &lt;img class="menubar-logo" src="./logo.svg" /&gt;
+    &lt;p&gt;Menu&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-02"&gt;
+    &lt;div class="menubar-link-center"&gt;
+      &lt;p class="menubar-link active-link"&gt;Css&lt;/p&gt;
+      &lt;p class="menubar-link"&gt;Scss&lt;/p&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-03"&gt;
+    &lt;form&gt;
+      &lt;select&gt;
+        &lt;option value="en"&gt;En&lt;/option&gt;
+        &lt;option value="tn"&gt;Tn&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'menubar-02'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(menubar02)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #menubar02>
+&lt;header class="menubar-box"&gt;
+  &lt;div class="menubar-set-01"&gt;
+    &lt;img class="menubar-logo" src="./logo.svg" /&gt;
+    &lt;p&gt;Menu&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-02"&gt;
+    &lt;div class="menubar-link-left"&gt;
+      &lt;p class="menubar-link active-link"&gt;Css&lt;/p&gt;
+      &lt;p class="menubar-link"&gt;Scss&lt;/p&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-03"&gt;
+    &lt;form&gt;
+      &lt;select&gt;
+        &lt;option value="en"&gt;En&lt;/option&gt;
+        &lt;option value="tn"&gt;Tn&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'menubar-03'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(menubar03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #menubar03>
+&lt;header class="menubar-box"&gt;
+  &lt;div class="menubar-set-01"&gt;
+    &lt;img class="menubar-logo" src="./logo.svg" /&gt;
+    &lt;p&gt;Menu&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-02"&gt;
+    &lt;div class="menubar-link-right"&gt;
+      &lt;p class="menubar-link active-link"&gt;Css&lt;/p&gt;
+      &lt;p class="menubar-link"&gt;Scss&lt;/p&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-03"&gt;
+    &lt;form&gt;
+      &lt;select&gt;
+        &lt;option value="en"&gt;En&lt;/option&gt;
+        &lt;option value="tn"&gt;Tn&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'menubar-04'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(menubar03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #menubar03>
+&lt;header class="menubar-resizable"&gt;
+  &lt;div class="menubar-set-01"&gt;
+    &lt;span class="material-symbols-outlined" id="menubar-thumb"&gt; menu &lt;/span&gt;
+    &lt;p&gt;Menu&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar-set-02"&gt;
+    &lt;span class="material-symbols-outlined btn-icon"&gt; logout &lt;/span&gt;
+    &lt;div class="menubar-profile-box"&gt;
+      &lt;span class="material-symbols-outlined btn-icon"&gt; account_circle &lt;/span&gt;
+      &lt;div class="profile-details"&gt;
+        &lt;p class="profile-name"&gt;Peter&lt;/p&gt;
+        &lt;small class="profile-role"&gt;Senior Developer&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
 </code>
 </pre>
     </div>

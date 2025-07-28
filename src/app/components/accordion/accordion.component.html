@@ -6,13 +6,7 @@
       <p>Quick, clean, and crafted — just plug 'em in!</p>
     </div>
     <div class="card-body">
-      <div
-        [ngClass]="
-          themeService.isDarkMode === true
-            ? 'accordion-grup cf-dark '
-            : 'accordion-grup'
-        "
-      >
+      <div class="accordion-grup">
         <ng-container *ngFor="let data of accContent">
           <div class="accordion-main" cssFusionAccordion>
             <div class="acc-head acc-static">
@@ -40,13 +34,7 @@
         </div>
       </div>
       <div class="card-body">
-        <div
-          [ngClass]="
-            themeService.isDarkMode === true
-              ? 'accordion-grup cf-dark '
-              : 'accordion-grup'
-          "
-        >
+        <div class="accordion-grup">
           <ng-container *ngFor="let data of accContent">
             <div class="accordion-main" cssFusionAccordion>
               <div class="acc-head acc-static">
@@ -77,13 +65,7 @@
       </div>
       <!-- Dynamic -->
       <div class="card-body">
-        <div
-          [ngClass]="
-            themeService.isDarkMode === true
-              ? 'accordion-grup cf-dark '
-              : 'accordion-grup'
-          "
-        >
+        <div class="accordion-grup">
           <ng-container *ngFor="let data of accContent">
             <div class="accordion-main" cssFusionAccordion>
               <div class="acc-head">
@@ -113,13 +95,7 @@
         </div>
       </div>
       <div class="card-body">
-        <div
-          [class]="
-            themeService.isDarkMode === true
-              ? 'accordion-grup cf-dark'
-              : 'accordion-grup'
-          "
-        >
+        <div class="accordion-grup">
           <div class="accordion-main" cssFusionAccordion>
             <div class="acc-head">
               <h2 class="acc-title">Introduction</h2>

@@ -2,6 +2,7 @@
 // Package
 // @import "@dev.spot/css-fusion/src/lib/scss/main.scss";
 @import "../projects/css-fusion/src/lib/scss/main.scss";
+@import "./assets/customized-material.scss";
 
 @font-face {
   font-family: "Agdasima-Regular";
@@ -18,58 +19,56 @@
 }
 
 :root {
+  --layout-adjustment: 7rem;
+  --app-theme-clr: #117ee5;
   --app-head-font: "Agdasima-Bold";
   --app-content-font: "Poppins", sans-serif;
-  --app-bg-clr: #ffffff;
-  --app-font-clr: #000;
+  --app-header-bg: #ffffff;
   --app-header-bdr: #e0e0e0;
-  --app-active-link: #000;
-  --app-btn-bg: #000;
+  --app-bg-clr: #fafafa;
+  --app-font-clr: #000;
+  --app-sub-font-clr: #000;
+  --app-active-link: var(--app-theme-clr);
+  --app-btn-bg: var(--app-theme-clr);
   --app-btn-font: #ffffff;
-  --app-theme-dark-bg: #0582fa;
+  --app-theme-dark-bg: var(--app-theme-clr);
   --app-theme-dark-font: #ffffff;
   --app-theme-light-bg: #ebf3f9;
-  --app-theme-light-font: #0582fa;
+  --app-theme-light-font: var(--app-theme-clr);
   --list-card-bg: #fafafa;
   --list-card-bdr: #e0e0e0;
-  --list-card-font: #c9a3a3;
+  --list-card-font: #898989;
   --sidenav-bg: #ffffff;
   --sidenav-bdr: #e0e0e0;
   --sidenav-font: #ac9f9f;
+  --stepper-number-active-bg: var(--app-theme-clr);
 }
 
 .light-mode {
-  --app-bg-clr: #ffffff;
-  --app-font-clr: #000;
+  --app-header-bg: #ffffff;
   --app-header-bdr: #e0e0e0;
-  --app-active-link: #000;
-  --app-btn-bg: #000;
+  --app-bg-clr: #fafafa;
+  --app-font-clr: #000;
   --app-btn-font: #ffffff;
-  --app-theme-dark-bg: #0582fa;
-  --app-theme-dark-font: #ffffff;
-  --app-theme-light-bg: #ebf3f9;
-  --app-theme-light-font: #0582fa;
-  --list-card-bg: #fafafa;
+  --list-card-bg: #ffffff;
   --list-card-bdr: #e0e0e0;
-  --list-card-font: #c9a3a3;
   --sidenav-bg: #ffffff;
   --sidenav-bdr: #e0e0e0;
   --sidenav-font: #ac9f9f;
+  --stepper-number-bg: #737373;
 }
 
 .dark-mode {
-  --app-bg-clr: #000;
+  --app-header-bg: #020408;
+  --app-header-bdr: #3c434c;
+  --app-bg-clr: #0c1116;
   --app-font-clr: #ffffff;
-  --app-header-bdr: #2c2c2c;
-  --app-active-link: #ffffff;
-  --app-btn-bg: #ffffff;
-  --app-btn-font: #000;
   --list-card-bg: #121212;
-  --list-card-bdr: #2c2c2c;
-  --list-card-font: #c9a3a3;
+  --list-card-bdr: #3c434c;
   --sidenav-bg: #000;
-  --sidenav-bdr: #2c2c2c;
+  --sidenav-bdr: #3c434c;
   --sidenav-font: #ac9f9f;
+  --stepper-number-bg: #303540;
 }
 
 * {
@@ -95,18 +94,6 @@ body {
   font-size: 1.6rem;
 }
 
-.mat-typography h1,
-.mat-typography h2,
-.mat-typography h3,
-.mat-typography h4,
-.mat-typography h5,
-.mat-typography h6 {
-  margin: 0;
-  padding: 0;
-  font-family: var(--app-head-font);
-}
-
-.mat-typography p,
 a,
 button {
   margin: 0;
@@ -114,44 +101,9 @@ button {
   font-family: var(--app-content-font);
 }
 
-// .material-symbols-outlined {
-//   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
-// }
-
-.mat-mdc-menu-item-text {
-  font-family: var(--app-content-font) !important;
-  font-weight: 500 !important;
-  font-size: 1.4rem !important;
-}
-
-.mat-mdc-menu-item {
-  min-height: 44px !important;
-}
-
-.cdk-overlay-pane {
-  margin-top: 10px !important;
-}
-
-.mat-ripple,
-.mat-step-header-ripple,
-.mat-focus-indicator,
-.mat-step-header {
-  &:hover {
-    background-color: transparent !important;
-  }
-
-  &:active {
-    background-color: transparent !important;
-  }
-
-  &:focus {
-    background-color: transparent !important;
-  }
-}
-
 // App
 #component-container {
-  height: calc(100dvh - 6rem);
+  height: calc(100dvh - var(--layout-adjustment));
   display: grid;
   grid-template-columns: 20rem calc(100dvw - 20rem);
   overflow: hidden;
@@ -219,9 +171,9 @@ button {
   }
 
   #app-components {
-    height: calc(100dvh - 6rem);
+    height: calc(100dvh - var(--layout-adjustment));
     padding: 0 2.8rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     .app-intro-card {
       height: 100%;
@@ -335,66 +287,66 @@ button {
           }
         }
       }
+    }
 
-      .code-box {
-        width: 100%;
-        border: 0.1rem solid var(--list-card-bdr);
-        background-color: var(--list-card-bg);
-        border-radius: 1rem;
-        margin-top: 1.8rem;
-        overflow: hidden;
+    .code-box {
+      width: 100%;
+      border: 0.1rem solid var(--list-card-bdr);
+      background-color: var(--list-card-bg);
+      border-radius: 1rem;
+      margin-top: 1.8rem;
+      overflow: hidden;
 
-        header {
-          background-color: var(--app-bg-clr);
-          border-bottom: 0.1rem solid var(--list-card-bdr);
+      header {
+        background-color: var(--app-bg-clr);
+        border-bottom: 0.1rem solid var(--list-card-bdr);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 1.8rem;
+
+        p {
+          font-size: 1.3rem;
+          font-weight: 500;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          padding: 1.2rem 1.8rem;
+          justify-content: center;
+          border-radius: 0.6rem;
 
-          p {
-            font-size: 1.3rem;
-            font-weight: 500;
-          }
-
-          button {
-            background-color: transparent;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0.6rem;
-
-            .material-symbols-outlined {
-              font-size: 1.8rem;
-            }
+          .material-symbols-outlined {
+            font-size: 1.8rem;
           }
         }
+      }
 
-        pre[class*="language-"] {
-          padding: 0 1.8rem;
-          margin: 0;
-          overflow: auto !important;
-          max-width: 100%;
-          box-sizing: border-box;
-          white-space: pre;
-        }
+      pre[class*="language-"] {
+        padding: 0 1.8rem;
+        margin: 0;
+        overflow: auto !important;
+        max-width: 100%;
+        box-sizing: border-box;
+        white-space: pre;
+      }
 
-        code {
-          color: var(--app-font-clr);
-          display: block;
-          min-width: 100%;
-        }
+      code {
+        color: var(--app-font-clr);
+        display: block;
+        min-width: 100%;
+      }
 
-        code[class*="language-"],
-        pre[class*="language-"] {
-          text-shadow: none;
-        }
+      code[class*="language-"],
+      pre[class*="language-"] {
+        text-shadow: none;
+      }
 
-        &:not(pre) > code[class*="language-"],
-        pre[class*="language-"] {
-          background: transparent !important;
-        }
+      &:not(pre) > code[class*="language-"],
+      pre[class*="language-"] {
+        background: transparent !important;
       }
     }
   }
@@ -437,36 +389,6 @@ button {
       font-size: 1.4rem;
       font-weight: 500;
     }
-  }
-}
-
-#app-template-box {
-  .app-components-intro {
-    height: calc(100dvh - 6rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    .card-header {
-      text-align: center;
-
-      h3 {
-        font-size: 3.8rem;
-        margin-bottom: 2rem;
-      }
-
-      p {
-        font-size: 1.6rem;
-        font-weight: 500;
-        margin-bottom: 4rem;
-      }
-    }
-  }
-
-  .card-body {
-    width: 100%;
-    max-width: 70rem;
   }
 }
 

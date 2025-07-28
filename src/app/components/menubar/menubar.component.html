@@ -2,9 +2,163 @@
   <!-- Intro -->
   <div class="app-intro-card">
     <div class="card-header">
-      <h3>Top-Level Navigation</h3>
+      <h3>Top-Level Menubar</h3>
       <p>Guide users confidently with a sleek, responsive header bar.</p>
     </div>
     <div class="card-body"></div>
+  </div>
+
+  <div class="app-components-box">
+    <div class="app-card">
+      <div class="card-header">
+        <div>
+          <h3>Center Stage Menu</h3>
+          <p>Navigation links that sit front and center — bold and balanced.</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <header class="menubar-box">
+          <div class="menubar-set-01">
+            <img class="menubar-logo" src="./assets/me-logo.svg" />
+            <p>Menu</p>
+          </div>
+          <div class="menubar-set-02">
+            <div class="menubar-link-center">
+              <p class="menubar-link active-link">Css</p>
+              <p class="menubar-link">Scss</p>
+              <p class="menubar-link">Javascript</p>
+              <p class="menubar-link">Angular</p>
+              <p class="menubar-link">React</p>
+              <p class="menubar-link">Github</p>
+            </div>
+          </div>
+          <div class="menubar-set-03">
+            <form>
+              <select>
+                <option value="en">En</option>
+                <option value="tn">Tn</option>
+              </select>
+            </form>
+          </div>
+        </header>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'menubar-01'"></app-comps-code>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="card-header">
+        <div>
+          <h3>Classic Left Align</h3>
+          <p>A familiar flow — links neatly aligned for muscle memory wins.</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <header class="menubar-box">
+          <div class="menubar-set-01">
+            <img class="menubar-logo" src="./assets/me-logo.svg" />
+            <p>Menu</p>
+          </div>
+          <div class="menubar-set-02">
+            <div class="menubar-link-left">
+              <p class="menubar-link">Css</p>
+              <p class="menubar-link">Scss</p>
+              <p class="menubar-link active-link">Javascript</p>
+              <p class="menubar-link">Angular</p>
+              <p class="menubar-link">React</p>
+              <p class="menubar-link">Github</p>
+            </div>
+          </div>
+          <div class="menubar-set-03">
+            <form>
+              <select>
+                <option value="en">En</option>
+                <option value="tn">Tn</option>
+              </select>
+            </form>
+          </div>
+        </header>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'menubar-02'"></app-comps-code>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="card-header">
+        <div>
+          <h3>Right in Control</h3>
+          <p>
+            Shift the focus with right-aligned links that feel modern and sharp.
+          </p>
+        </div>
+      </div>
+      <div class="card-body">
+        <header class="menubar-box">
+          <div class="menubar-set-01">
+            <img class="menubar-logo" src="./assets/me-logo.svg" />
+            <p>Menu</p>
+          </div>
+          <div class="menubar-set-02">
+            <div class="menubar-link-right">
+              <p class="menubar-link">Css</p>
+              <p class="menubar-link">Scss</p>
+              <p class="menubar-link">Javascript</p>
+              <p class="menubar-link">Angular</p>
+              <p class="menubar-link active-link">React</p>
+              <p class="menubar-link">Github</p>
+            </div>
+          </div>
+          <div class="menubar-set-03">
+            <form>
+              <select>
+                <option value="en">En</option>
+                <option value="tn">Tn</option>
+              </select>
+            </form>
+          </div>
+        </header>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'menubar-03'"></app-comps-code>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="card-header">
+        <div>
+          <h3>Smart & Resizable</h3>
+          <p>
+            Expandable menu with user flair — collapses clean, expands smart.
+          </p>
+        </div>
+      </div>
+      <div class="card-body">
+        <header class="menubar-resizable">
+          <div class="menubar-set-01">
+            <span class="material-symbols-outlined" id="menubar-thumb">
+              menu
+            </span>
+            <p>Menu</p>
+          </div>
+          <div class="menubar-set-02">
+            <span class="material-symbols-outlined btn-icon"> logout </span>
+            <div class="menubar-profile-box">
+              <span class="material-symbols-outlined btn-icon">
+                account_circle
+              </span>
+              <div class="profile-details">
+                <p class="profile-name">Peter</p>
+                <small class="profile-role">Senior Developer</small>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="card-code">
+        <app-comps-code [showCode]="'menubar-04'"></app-comps-code>
+      </div>
+    </div>
   </div>
 </section>
