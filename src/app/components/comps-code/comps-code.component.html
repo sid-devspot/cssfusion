@@ -732,6 +732,7 @@ export class AccordionComponent implements OnInit &#123;
       <pre class="line-numbers">
 <code class="language-html" #card03>
 &lt;div class="chart-cards"&gt;
+  &lt;!-- Yellow --&gt;
   &lt;div class="card-box-yellow card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -740,6 +741,8 @@ export class AccordionComponent implements OnInit &#123;
       &lt;p class="chart-num"&gt;...&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+
+  &lt;!-- Green --&gt;
   &lt;div class="card-box-green card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -748,6 +751,8 @@ export class AccordionComponent implements OnInit &#123;
       &lt;p class="chart-num"&gt;...&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+
+  &lt;!-- Orange --&gt;
   &lt;div class="card-box-orange card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -756,6 +761,8 @@ export class AccordionComponent implements OnInit &#123;
       &lt;p class="chart-num"&gt;...&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+
+  &lt;!-- Blue --&gt;
   &lt;div class="card-box-blue card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -764,6 +771,8 @@ export class AccordionComponent implements OnInit &#123;
       &lt;p class="chart-num"&gt;...&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+
+  &lt;!-- Violet --&gt;
   &lt;div class="card-box-violet card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -772,6 +781,8 @@ export class AccordionComponent implements OnInit &#123;
       &lt;p class="chart-num"&gt;...&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+
+  &lt;!-- Gray --&gt;
   &lt;div class="card-box-gray card-fixed"&gt;
     &lt;div class="card-head"&gt;
       &lt;div class="card-title"&gt;...&lt;/div&gt;
@@ -781,6 +792,90 @@ export class AccordionComponent implements OnInit &#123;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Dropdown -->
+<div *ngIf="showCode === 'dropdown-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button
+        class="code-copy"
+        matTooltip="copy"
+        (click)="copyCode(dropdown01)"
+      >
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #dropdown01>
+&lt;div class="dropdown-box" id="dropdown01" cssFusionDropdown&gt;
+  &lt;div class="dd-menu"&gt;
+    &lt;p class="dd-name"&gt;...&lt;/p&gt;
+    &lt;span class="material-symbols-outlined"&gt; arrow_drop_down &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;ul class="dd-list"&gt;
+    &lt;li class="dd-option"&gt;...&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<div *ngIf="showCode === 'navbar-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(navbar01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #navbar01>
+&lt;nav class="navbar-box" cssFusionNav&gt;
+  &lt;div class="navbar-set01"&gt;
+    &lt;h3&gt;
+      &lt;span class="material-symbols-outlined nav-logo"&gt; android &lt;/span&gt;
+      &lt;span class="nav-txt"&gt;Company Logo&lt;/span&gt;
+    &lt;/h3&gt;
+    &lt;span
+      class="material-symbols-outlined nav-icon-trigger"
+      id="navLeft-tigger"
+    &gt;
+      keyboard_double_arrow_left
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar-set02"&gt;
+    &lt;small class="nav-menu"&gt;Home&lt;/small&gt;
+    &lt;p class="navbar-link navbar-active"&gt;
+      &lt;span class="material-symbols-outlined nav-icon"&gt;dashboard&lt;/span&gt;
+      &lt;span class="nav-txt"&gt;Dashboard&lt;/span&gt;
+    &lt;/p&gt;
+     &lt;p class="navbar-link navbar-active"&gt;
+      &lt;span class="material-symbols-outlined nav-icon"&gt;add_circle&lt;/span&gt;
+      &lt;span class="nav-txt"&gt;...&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar-set03"&gt;
+    &lt;div class="user"&gt;
+      &lt;span class="material-symbols-outlined user-img"&gt;account_circle&lt;/span&gt;
+      &lt;div class="user-info nav-txt"&gt;
+        &lt;h3&gt;User Name&lt;/h3&gt;
+        &lt;p&gt;Ui/Ux Developer&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class="material-symbols-outlined more-icon"&gt; steppers &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
 </code>
 </pre>
     </div>
@@ -929,6 +1024,497 @@ export class AccordionComponent implements OnInit &#123;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/header&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<div *ngIf="showCode === 'table-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table01>
+&lt;div class="table-box tbl-bdr-btm"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-02'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table02)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table02>
+&lt;div class="table-btns"&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; keyboard_double_arrow_left &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; chevron_left &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;p class="page-count"&gt;&lt;span class="active-page"&gt;01&lt;/span&gt; of 50&lt;/p&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; chevron_right &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; keyboard_double_arrow_right &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-03'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table03)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table03>
+&lt;div class="table-box tbl-bdr-btm"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-04'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table04)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table04>
+&lt;div class="table-box tbl-bdr-rect"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-05'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table05)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table05>
+&lt;div class="table-box-blue tbl-bdr-btm-blue"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-box-yellow tbl-bdr-btm-yellow"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-box-green tbl-bdr-btm-green"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-box-orange tbl-bdr-btm-orange"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-box-violet tbl-bdr-btm-violet"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class="table-box-gray tbl-bdr-btm-gray"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-06'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table06)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table06>
+&lt;div class="table-box tbl-responsive tbl-bdr-btm"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-07'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table07)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table07>
+&lt;div class="table-box table-box tbl-bdr-btm tbl-line-hover"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-08'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table08)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table08>
+&lt;div class="table-box tbl-bdr-rect tbl-row-hover"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-09'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table09)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table09>
+&lt;div class="table-box tbl-row-even"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-10'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table10)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table10>
+&lt;div class="table-box tbl-clm-even"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-11'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table11)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table11>
+&lt;div class="table-box tbl-row-odd"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-12'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table12)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table12>
+&lt;div class="table-box tbl-clm-odd"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;...&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showCode === 'table-13'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(table12)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #table12>
+&lt;div class="table-box tbl-responsive tbl-bdr-btm"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class="tbl-col-xsm"&gt;SI.No&lt;/th&gt;
+        &lt;th&gt;Batch No&lt;/th&gt;
+        &lt;th&gt;Brand&lt;/th&gt;
+        &lt;th
+          class="tbl-col-sm tbl-sort"
+          [tableData]="tableLg"
+          [columnIndex]="3"
+          (sortChanged)="onSortChanged($event)"
+          (sortStatus)="sortStatus = $event"
+          cssFusionTable
+        &gt;
+          &lt;p&gt;
+            Modal
+            &lt;b&gt;({{flowerOpen}} sortStatus {{flowerClose}})&lt;/b&gt;
+            &lt;span class="material-symbols-outlined"&gt; swap_vert &lt;/span&gt;
+          &lt;/p&gt;
+        &lt;/th&gt;
+        &lt;th&gt;Service Date&lt;/th&gt;
+        &lt;th class="tbl-col-md"&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr *ngFor="let tbody of tableLg"&gt;
+        &lt;td *ngFor="let tr of tbody.tr"&gt;{{flowerOpen}} tr {{flowerClose}}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="table-btns"&gt;
+  &lt;button type="button" class="page-btn" (click)="clearSort()"&gt;
+    &lt;span class="material-symbols-outlined"&gt; restart_alt &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; keyboard_double_arrow_left &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; chevron_left &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;p class="page-count"&gt;&lt;span class="active-page"&gt;01&lt;/span&gt; of 50&lt;/p&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; chevron_right &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button type="button" class="page-btn"&gt;
+    &lt;span class="material-symbols-outlined"&gt; keyboard_double_arrow_right &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div *ngIf="showCode === 'tabs-01'">
+  <div class="code-box">
+    <header *ngIf="compCodeHead === true">
+      <p>Html Snippet</p>
+      <button class="code-copy" matTooltip="copy" (click)="copyCode(tabs01)">
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #tabs01>
+&lt;div class="tabs-box tab-bdr" cssFusionTabs&gt;
+  &lt;div class="tab-list-group tab-list-center"&gt;
+    &lt;p class="scroll-arrow tab-left"&gt;
+      &lt;mat-icon class="btn-icon"&gt;keyboard_arrow_left&lt;/mat-icon&gt;
+    &lt;/p&gt;
+    &lt;nav class="tab-list"&gt;
+      &lt;p class="tab-name tab-01 active-tab"&gt;Home&lt;/p&gt;
+      &lt;p class="tab-name tab-02"&gt;Company&lt;/p&gt;
+      &lt;p class="tab-name tab-03"&gt;Service&lt;/p&gt;
+    &lt;/nav&gt;
+    &lt;p class="scroll-arrow tab-right"&gt;
+      &lt;mat-icon class="btn-icon"&gt;keyboard_arrow_right&lt;/mat-icon&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;section class="tab-body-set"&gt;
+    &lt;ng-container *ngFor="let data of tabContent"&gt;
+      &lt;div [class]="data.class"&gt;
+        &lt;h3 class="tab-title"&gt;{{flowerOpen}} data.tabTitle {{flowerClose}}&lt;/h3&gt;
+        &lt;p class="tab-content"&gt;{{flowerOpen}} data.tabContent {{flowerClose}}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/ng-container&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
 </code>
 </pre>
     </div>

@@ -72,9 +72,9 @@ export class NavDirective implements AfterViewInit {
   updateResizeClass() {
     const container = this.el.nativeElement;
     if (this.isResized) {
-      container.classList.add('navleft-resize');
+      container.classList.add('resize');
     } else {
-      container.classList.remove('navleft-resize');
+      container.classList.remove('resize');
     }
   }
 

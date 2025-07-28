@@ -5,7 +5,31 @@
       <h3>Switch Without the Mess</h3>
       <p>Snap between sections in a click — tabbed UI that's clean and fast.</p>
     </div>
-    <div class="card-body"></div>
+    <div class="card-body">
+      <div class="tabs-box tab-bdr" cssFusionTabs>
+        <div class="tab-list-group tab-list-center">
+          <p class="scroll-arrow tab-left">
+            <mat-icon class="btn-icon">keyboard_arrow_left</mat-icon>
+          </p>
+          <nav class="tab-list">
+            <p class="tab-name tab-01 active-tab">Home</p>
+            <p class="tab-name tab-02">Company</p>
+            <p class="tab-name tab-03">Service</p>
+          </nav>
+          <p class="scroll-arrow tab-right">
+            <mat-icon class="btn-icon">keyboard_arrow_right</mat-icon>
+          </p>
+        </div>
+        <section class="tab-body-set">
+          <ng-container *ngFor="let data of tabContent">
+            <div [class]="data.class">
+              <h3 class="tab-title">{{ data.tabTitle }}</h3>
+              <p class="tab-content">{{ data.tabContent }}</p>
+            </div>
+          </ng-container>
+        </section>
+      </div>
+    </div>
   </div>
 
   <div class="app-components-box">
@@ -14,14 +38,7 @@
         <h3>Regular</h3>
       </div>
       <div class="card-body">
-        <div
-          [class]="
-            themeService.isDarkMode === true
-              ? 'tab-view tab-bdr cf-dark'
-              : 'tab-view tab-bdr'
-          "
-          cssFusionTabs
-        >
+        <div class="tabs-box tab-bdr" cssFusionTabs>
           <div class="tab-list-group tab-list-center">
             <p class="scroll-arrow tab-left">
               <mat-icon class="btn-icon">keyboard_arrow_left</mat-icon>
@@ -43,6 +60,10 @@
               </div>
             </ng-container>
           </section>
+        </div>
+
+        <div class="card-code">
+          <app-comps-code [showCode]="'tabs-01'"></app-comps-code>
         </div>
       </div>
     </div>

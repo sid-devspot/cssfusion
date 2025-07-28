@@ -11,6 +11,8 @@ export class CompsCodeComponent {
   @Input() showCode: string = '';
   @Input() compCodeHead: boolean = true;
   showLang: string = '';
+  flowerOpen: string = '{{';
+  flowerClose: string = '}}';
 
   constructor(private snackBar: MatSnackBar) {}
 
