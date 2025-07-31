@@ -97,6 +97,7 @@
     }
 
     .navbar-link {
+      border: 1.5px solid transparent;
       font-family: var(--font-family);
       display: flex;
       align-items: center;
@@ -112,7 +113,7 @@
 
     .navbar-active {
       border: 1.5px solid var(--navbar-bdr-active);
-      background-color: var(--navbar-active-bg);
+      background-color: var(--navbar-bg-active);
     }
 
     &::-webkit-scrollbar {
@@ -233,8 +234,17 @@
       padding: 10px;
 
       .nav-txt {
+        display: none;
         padding-left: 0 !important;
       }
+    }
+
+    .nav-menu {
+      display: inline-block;
+      max-width: 8ch; // restrict to approx. 8 characters
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 

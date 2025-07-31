@@ -7,12 +7,21 @@
       </div>
       <div class="menubar-set-02">
         <div class="menubar-link-left">
-          <p class="menubar-link">Css</p>
-          <p class="menubar-link">Scss</p>
-          <p class="menubar-link active-link">Javascript</p>
-          <p class="menubar-link">Angular</p>
-          <p class="menubar-link">React</p>
-          <p class="menubar-link">Github</p>
+          <p
+            class="menubar-link"
+            *ngFor="
+              let section of [
+                'Getting Started',
+                'Documentation',
+                'Processes',
+                'Support'
+              ]
+            "
+            [class.active-link]="selectedSection === section"
+            (click)="onSectionClick(section)"
+          >
+            {{ section }}
+          </p>
         </div>
       </div>
       <div class="menubar-set-03">
@@ -24,13 +33,11 @@
         </form>
       </div>
     </header>
-  
+
     <section class="app-body">
       <nav class="navbar-box" cssFusionNav>
         <div class="navbar-set01">
-          <h3>
-            Menus
-          </h3>
+          <h3>Menus</h3>
           <span
             class="material-symbols-outlined nav-icon-trigger"
             id="navLeft-tigger"
@@ -41,11 +48,13 @@
         <div class="navbar-set02">
           <ng-container *ngFor="let data of navMenusProp">
             <small class="nav-menu">{{ data.title }}</small>
-            <!-- <p class="navbar-link navbar-active">
-              <span class="material-symbols-outlined nav-icon">dashboard</span>
-              <span class="nav-txt">Dashboard</span>
-            </p> -->
-            <p class="navbar-link" *ngFor="let menu of data.menus">
+            <p
+              class="navbar-link"
+              *ngFor="let menu of data.menus"
+              [ngClass]="menu.text === selectedMenuTitle ? 'navbar-active' : ''"
+              (click)="onMenuClick(menu)"
+              
+            >
               <span class="material-symbols-outlined nav-icon">{{
                 menu.icon
               }}</span>
@@ -55,18 +64,31 @@
         </div>
         <div class="navbar-set03">
           <div class="user">
-            <span class="material-symbols-outlined user-img">account_circle</span>
+            <span class="material-symbols-outlined user-img"
+              >account_circle</span
+            >
             <div class="user-info nav-txt">
-              <h3>User Name</h3>
-              <p>Ui/Ux Developer</p>
+              <h3 class="user-info-name">User Name</h3>
+              <p class="user-info-desc">Ui/Ux Developer</p>
             </div>
           </div>
           <span class="material-symbols-outlined more-icon"> steppers </span>
         </div>
       </nav>
-  
+
       <div class="app-content">
-        <p>Text</p>
+        <div class="me-content-intro">
+          <h2>{{ appContentData[selectedSection]?.title }}</h2>
+          <p *ngFor="let desc of appContentData[selectedSection]?.description">
+            {{ desc }}
+          </p>
+        </div>
+        <div class="me-content-nav-desc">
+          <h3 class="user-info-name">{{ selectedMenuTitle }}</h3>
+          <p class="user-info-desc">
+            {{ selectedMenuContent }}
+          </p>
+        </div>
       </div>
     </section>
   </main>

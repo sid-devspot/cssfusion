@@ -10,7 +10,6 @@
     .app-content {
       height: 100%;
       background-color: var(--app-content-bg);
-      padding: 20px;
       overflow-y: auto;
     }
   }
@@ -28,7 +27,6 @@
 
     .app-content {
       background-color: var(--app-content-bg);
-      padding: 20px;
       overflow-y: auto;
     }
   }
@@ -49,7 +47,6 @@
       margin-top: 10px;
       background-color: var(--neonflow-content-bg);
       border: 1.6px solid var(--neonflow-content-bdr);
-      padding: 20px;
       overflow-y: auto;
       color: #ffffff;
       border-radius: 10px;
