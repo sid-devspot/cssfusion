@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-motion',
   templateUrl: './motion.component.html',
-  styleUrl: './motion.component.scss'
+  styleUrls: ['./motion.component.scss'],
 })
-export class MotionComponent {
-
-}
+export class MotionComponent {}

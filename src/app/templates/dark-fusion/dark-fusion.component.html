@@ -1,1 +1,67 @@
-<p>dark-fusion works!</p>
+<div class="template-container">
+  <main class="dark-fusion">
+    <nav class="navbar-box" cssFusionNav>
+      <div class="navbar-set01">
+        <h3 class="navbar-logo-title">
+          <span class="material-symbols-outlined nav-logo"> android </span>
+          <span class="nav-txt">Company Logo</span>
+        </h3>
+        <span
+          class="material-symbols-outlined nav-icon-trigger"
+          id="navLeft-tigger"
+        >
+          keyboard_double_arrow_left
+        </span>
+      </div>
+      <div class="navbar-set02">
+        <ng-container *ngFor="let data of navMenusProp">
+          <small class="nav-menu">{{ data.title }}</small>
+          <!-- <p class="navbar-link navbar-active">
+            <span class="material-symbols-outlined nav-icon">dashboard</span>
+            <span class="nav-txt">Dashboard</span>
+          </p> -->
+          <p class="navbar-link" *ngFor="let menu of data.menus">
+            <span class="material-symbols-outlined nav-icon">{{
+              menu.icon
+            }}</span>
+            <span class="nav-txt">{{ menu.text }}</span>
+          </p>
+        </ng-container>
+      </div>
+      <div class="navbar-set03">
+        <div class="user">
+          <span class="material-symbols-outlined user-img">account_circle</span>
+          <div class="user-info nav-txt">
+            <h3 class="user-info-name">User Name</h3>
+            <p class="user-info-desc">Ui/Ux Developer</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined more-icon"> steppers </span>
+      </div>
+    </nav>
+
+    <section class="app-body">
+      <header class="menubar-resizable">
+        <div class="menubar-set-01">
+          <p class="menubar-logo-name">Menu</p>
+        </div>
+        <div class="menubar-set-02">
+          <span class="material-symbols-outlined menubar-icons"> logout </span>
+          <div class="menubar-profile-box">
+            <span class="material-symbols-outlined menubar-icons">
+              account_circle
+            </span>
+            <div class="profile-details">
+              <p class="profile-name">Peter</p>
+              <small class="profile-role">Senior Developer</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="app-content">
+        <p>Text</p>
+      </div>
+    </section>
+  </main>
+</div>

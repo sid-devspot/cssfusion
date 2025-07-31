@@ -2,6 +2,7 @@
   // Font
   --font-style: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
     Arial, "Lucida Grande", sans-serif;
+  --font-type-style: Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   // Dark
   --yellow-dark-clr: rgb(250, 175, 0);
@@ -59,14 +60,68 @@
   --input-font-clr: #727272;
 
   // Menubar
+  --menubar-height: 68px;
   --menubar-set01-size: 120px;
   --menubar-set03-size: 120px;
+  --menubar-bg: #ffffff;
+  --menubar-bdr: #ececec;
+  --menubar-logo-size: 32px;
+  --menubar-logo-name: #000;
+  --menubar-link: #7c7c7c;
+  --menubar-active-bg: #4d4d4d7f;
+  --menubar-active-text: #ffffff;
+  --menubar-links-bdr: #ececec;
+  --menubar-thumb: #000;
+  --menubar-icons: #000;
+  --menubar-profile-title: #000;
+  --menubar-profile-content: #393939;
+  --menubar-curv: unset;
 
   // Nav
-  --nav-dark-clr: #7d7d7d;
-  --nav-medium-clr: #c8c8c8;
-  --nav-light-clr: #fafafa;
-  --nav-font-clr: #ffffff;
+  --navbar-size: 260px;
+  --navbar-set01-height: 68px;
+  --navbar-resized: 80px;
+  --navbar-trigger-bg: #ffffff;
+  --navbar-trigger-font: #000;
+  --navbar-bg: #ffffff;
+  --navbar-bg-set01: unset;
+  --navbar-bg-set02: unset;
+  --navbar-bg-set03: unset;
+  --navbar-bg-active: #e3e3e3;
+  --navbar-bdr-full: unset;
+  --navbar-bdr: #ececec;
+  --navbar-bdr-set01: unset;
+  --navbar-bdr-set02: unset;
+  --navbar-bdr-set03: unset;
+  --navbar-trigger-bdr: #ececec;
+  --navbar-bdr-actve: #ececec;
+  --navbar-seperater: #ececec;
+  --navbar-font: #1f1e1e;
+  --navbar-font-set01: unset;
+  --navbar-font-set02: unset;
+  --navbar-font-set03: unset;
+  --navbar-curv: unset;
+  --navbar-menu-icons: #757575;
+  --navbar-menu-title: #757575;
+  --navbar-thumb: #888;
+  --navbar-thumb-active: #707070;
+
+  // App
+  --app-layout-height: 100dvh;
+  --app-content-bg: #fafafa;
+
+  // Templates
+  --neonflow-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --neonflow-content-bg: rgba(255, 255, 255, 0.05);
+  --neonflow-content-bdr: #ffffff20;
+
+  // Type Effect
+  --typeeffect-font-size: 28px;
+  --typeeffect-font-height: 40px;
+  --typeeffect-font-weight: 600;
+  --typeeffect-font-clr: #787878;
+  --typeeffect-font-bg: transparent;
+  --typeeffect-caret-clr: #808080;
 
   // Colour Mode
   --cf-mode-primary: #ffffff;

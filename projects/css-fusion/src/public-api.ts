@@ -11,3 +11,4 @@ export * from './lib/directives/dropdown.directive';
 export * from './lib/directives/nav.directive';
 export * from './lib/directives/table.directive';
 export * from './lib/directives/tab.directive';
+export * from './lib/directives/typewriter.directive';

@@ -1,0 +1,58 @@
+@import "variables";
+
+.dark-fusion {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  .app-body {
+    height: calc(var(--app-layout-height) - var(--menubar-height));
+
+    .app-content {
+      height: 100%;
+      background-color: var(--app-content-bg);
+      padding: 20px;
+      overflow-y: auto;
+    }
+  }
+}
+
+.minimal-edge {
+  .app-body {
+    height: calc(var(--app-layout-height) - var(--menubar-height));
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .navbar-box {
+      height: calc(var(--app-layout-height) - var(--menubar-height));
+    }
+
+    .app-content {
+      background-color: var(--app-content-bg);
+      padding: 20px;
+      overflow-y: auto;
+    }
+  }
+}
+
+.neon-flow {
+  background: var(--neonflow-bg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 10px;
+
+  .app-body {
+    height: calc(var(--app-layout-height) - (var(--menubar-height) + 10px));
+
+    .app-content {
+      height: 100%;
+      margin-top: 10px;
+      background-color: var(--neonflow-content-bg);
+      border: 1.6px solid var(--neonflow-content-bdr);
+      padding: 20px;
+      overflow-y: auto;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+  }
+}

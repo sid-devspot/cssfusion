@@ -20,6 +20,10 @@ import { MinimalEdgeComponent } from './minimal-edge/minimal-edge.component';
 import { NeonFlowComponent } from './neon-flow/neon-flow.component';
 import { SoftAuraComponent } from './soft-aura/soft-aura.component';
 
+// Package
+// import { CssFusionModule } from '@dev.spot/css-fusion';
+import { CssFusionModule } from './../../../projects/css-fusion/src/lib/css-fusion.module';
+
 @NgModule({
   declarations: [
     TemplatesComponent,
@@ -40,6 +44,7 @@ import { SoftAuraComponent } from './soft-aura/soft-aura.component';
     MatMenuModule,
     MatTabsModule,
     MatStepperModule,
+    CssFusionModule,
   ],
 })
 export class TemplatesModule {}

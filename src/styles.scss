@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 // Package
 // @import "@dev.spot/css-fusion/src/lib/scss/main.scss";
-@import "../projects/css-fusion/src/lib/scss/main.scss";
+@import "./../projects/css-fusion/src/lib/scss/main.scss";
 @import "./assets/customized-material.scss";
 
 @font-face {
@@ -42,6 +42,9 @@
   --sidenav-bdr: #e0e0e0;
   --sidenav-font: #ac9f9f;
   --stepper-number-active-bg: var(--app-theme-clr);
+
+  // Package
+  --app-layout-height: 80dvh;
 }
 
 .light-mode {
@@ -222,119 +225,119 @@ button {
       justify-content: space-evenly;
       gap: 4rem;
     }
+  }
+}
 
-    .app-card {
-      .card-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 2rem;
+.app-card {
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 
-        h3 {
-          font-size: 2.8rem;
-          margin-bottom: 0.4rem;
-        }
-
-        .card-header-box {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          gap: 1rem;
-
-          .clr-blocks {
-            display: block;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 0.4rem;
-          }
-
-          .clr-green {
-            background-color: rgb(1, 157, 157);
-          }
-
-          .clr-yellow {
-            background-color: rgb(250, 175, 0);
-          }
-
-          .clr-orange {
-            background-color: rgb(255, 90, 31);
-          }
-
-          .clr-blue {
-            background-color: rgb(15, 85, 235);
-          }
-
-          .clr-violet {
-            background-color: rgb(127, 54, 221);
-          }
-
-          .clr-gray {
-            background-color: rgb(159, 159, 159);
-          }
-        }
-      }
+    h3 {
+      font-size: 2.8rem;
+      margin-bottom: 0.4rem;
     }
 
-    .code-box {
-      width: 100%;
-      border: 0.1rem solid var(--list-card-bdr);
-      background-color: var(--list-card-bg);
-      border-radius: 1rem;
-      margin-top: 1.8rem;
-      overflow: hidden;
+    .card-header-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
 
-      header {
-        background-color: var(--app-bg-clr);
-        border-bottom: 0.1rem solid var(--list-card-bdr);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.2rem 1.8rem;
-
-        p {
-          font-size: 1.3rem;
-          font-weight: 500;
-        }
-
-        button {
-          background-color: transparent;
-          border: none;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0.6rem;
-
-          .material-symbols-outlined {
-            font-size: 1.8rem;
-          }
-        }
-      }
-
-      pre[class*="language-"] {
-        padding: 0 1.8rem;
-        margin: 0;
-        overflow: auto !important;
-        max-width: 100%;
-        box-sizing: border-box;
-        white-space: pre;
-      }
-
-      code {
-        color: var(--app-font-clr);
+      .clr-blocks {
         display: block;
-        min-width: 100%;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.4rem;
       }
 
-      code[class*="language-"],
-      pre[class*="language-"] {
-        text-shadow: none;
+      .clr-green {
+        background-color: rgb(1, 157, 157);
       }
 
-      &:not(pre) > code[class*="language-"],
-      pre[class*="language-"] {
-        background: transparent !important;
+      .clr-yellow {
+        background-color: rgb(250, 175, 0);
+      }
+
+      .clr-orange {
+        background-color: rgb(255, 90, 31);
+      }
+
+      .clr-blue {
+        background-color: rgb(15, 85, 235);
+      }
+
+      .clr-violet {
+        background-color: rgb(127, 54, 221);
+      }
+
+      .clr-gray {
+        background-color: rgb(159, 159, 159);
       }
     }
+  }
+}
+
+.code-box {
+  width: 100%;
+  border: 0.1rem solid var(--list-card-bdr);
+  background-color: var(--list-card-bg);
+  border-radius: 1rem;
+  margin-top: 1.8rem;
+  overflow: hidden;
+
+  header {
+    background-color: var(--app-bg-clr);
+    border-bottom: 0.1rem solid var(--list-card-bdr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.8rem;
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.6rem;
+
+      .material-symbols-outlined {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  pre[class*="language-"] {
+    padding: 0 1.8rem;
+    margin: 0;
+    overflow: auto !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: pre;
+  }
+
+  code {
+    color: var(--app-font-clr);
+    display: block;
+    min-width: 100%;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+
+  &:not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: transparent !important;
   }
 }
 
@@ -376,6 +379,13 @@ button {
       font-weight: 500;
     }
   }
+}
+
+#motion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 @media only screen and (max-width: 810px) {
