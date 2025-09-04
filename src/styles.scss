@@ -342,10 +342,13 @@ button {
 }
 
 #template-container {
-  padding: 4rem;
+  height: calc(100dvh - var(--layout-adjustment));
+  padding-top: 4rem;
+  overflow: hidden;
 
   #template-header {
-    margin-bottom: 4rem;
+    height: 9rem;
+    padding: 0 4rem;
 
     h2 {
       font-size: 3.2rem;
@@ -358,11 +361,14 @@ button {
   }
 
   #template-list {
+    height: calc(100dvh - var(--layout-adjustment) - 13rem);
+    padding: 0 4rem 4rem 4rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     align-items: center;
     justify-content: start;
     gap: 4rem;
+    overflow: auto;
 
     a {
       height: 28rem;

@@ -17,6 +17,12 @@
   --menubar-bg: rgba(255, 255, 255, 0.05);
   --menubar-bdr: #ffffff20;
   --menubar-curv: 10px;
+  --menubar-logo-name: #ffffff;
+  --menubar-icons: #ffffff;
+  --menubar-profile-title: #ffffff;
+  --menubar-profile-content: #e3e3e3;
+  --navbar-trigger-font: #ffffff;
+  --navbar-menu-title: #e3e3e3;
 }
 
 .template-container {
@@ -36,4 +42,8 @@
 
 .neon-flow {
   width: 100%;
+}
+
+.app-content {
+  padding: 20px;
 }

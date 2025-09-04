@@ -16,7 +16,12 @@
       <div class="navbar-set02">
         <ng-container *ngFor="let data of navMenusProp">
           <small class="nav-menu">{{ data.title }}</small>
-          <p class="navbar-link" *ngFor="let menu of data.menus">
+          <p
+            class="navbar-link"
+            *ngFor="let menu of data.menus"
+            [ngClass]="menu.text === selectedMenuTitle ? 'navbar-active' : ''"
+            (click)="onMenuClick(menu)"
+          >
             <span class="material-symbols-outlined nav-icon">{{
               menu.icon
             }}</span>
@@ -56,7 +61,15 @@
       </header>
 
       <div class="app-content">
-        <p>Text</p>
+        <h1>{{ appContentData[selectedSection]?.title }}</h1>
+        <p *ngFor="let line of appContentData[selectedSection]?.description">
+          {{ line }}
+        </p>
+
+        <section *ngIf="selectedMenuTitle">
+          <h2>{{ selectedMenuTitle }}</h2>
+          <p>{{ selectedMenuContent }}</p>
+        </section>
       </div>
     </section>
   </main>

@@ -39,11 +39,6 @@
       cursor: pointer;
     }
 
-    .active-link {
-      background-color: var(--menubar-active-bg) !important;
-      color: var(--menubar-active-text) !important;
-    }
-
     .menubar-link-center {
       height: fit-content;
       display: flex;
@@ -70,6 +65,11 @@
       justify-content: flex-end !important;
       gap: 14px;
       padding-right: 20px;
+    }
+
+    .active-link {
+      background-color: var(--menubar-active-bg) !important;
+      color: var(--menubar-active-text) !important;
     }
   }
 

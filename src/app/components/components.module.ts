@@ -27,6 +27,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 
 // Library
 import { CssFusionModule } from './../../../projects/css-fusion/src/lib/css-fusion.module';
+import { CalendarComponent } from './calendar/calendar.component';
 // import { CssFusionModule } from '@dev.spot/css-fusion';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { CssFusionModule } from './../../../projects/css-fusion/src/lib/css-fusi
     TabComponent,
     CompsCodeComponent,
     VariablesComponent,
+    CalendarComponent,
   ],
   imports: [
     CommonModule,
