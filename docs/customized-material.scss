@@ -1,0 +1,70 @@
+.mat-typography h1,
+.mat-typography h2,
+.mat-typography h3,
+.mat-typography h4,
+.mat-typography h5,
+.mat-typography h6 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-head-font);
+}
+
+.mat-typography p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-content-font);
+}
+
+.mat-mdc-menu-item-text {
+  font-family: var(--app-content-font) !important;
+  font-weight: 500 !important;
+  font-size: 1.4rem !important;
+}
+
+.mat-mdc-menu-item {
+  min-height: 44px !important;
+}
+
+.cdk-overlay-pane {
+  margin-top: 10px !important;
+}
+
+.mat-ripple,
+.mat-step-header-ripple,
+.mat-focus-indicator,
+.mat-step-header {
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+
+.mat-stepper-vertical,
+.mat-stepper-horizontal {
+  background-color: transparent !important;
+}
+
+.mat-step-text-label {
+  color: var(--app-font-clr) !important;
+}
+
+.mat-stepper-vertical-line::before {
+  border-left-color: var(--app-font-clr) !important;
+}
+
+.mat-step-icon {
+  background-color: var(--stepper-number-bg) !important;
+  color: #ffffff !important;
+}
+
+.mat-step-icon-selected {
+  background-color: var(--stepper-number-active-bg) !important;
+  color: #ffffff !important;
+}
