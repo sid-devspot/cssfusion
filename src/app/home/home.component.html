@@ -1,0 +1,75 @@
+
+<section id="app-home">
+  <div class="home-01">
+    <div>
+      <h2>Let's Craft With Class!</h2>
+      <p>
+        Ready to sprinkle some fresh vibes into your Angular projects? Let's get
+        styling!
+      </p>
+      <div class="home-btns">
+        <button type="button">Get Start</button>
+        <button type="button" (click)="redirectTo()">Explore Docs</button>
+      </div>
+    </div>
+    <img src="landingpage_vector.svg" alt="Landing Page Vector" />
+  </div>
+  
+  <div class="home-02">
+    <h2>Ready to Roll?</h2>
+    <p class="home-desc">
+      All it takes is a few steps to sprinkle some style magic into your Angular
+      app. Let's go!
+    </p>
+  
+    <div class="installation">
+      <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+        <mat-step>
+          <ng-template matStepLabel>
+            <h3>Install the Package</h3>
+          </ng-template>
+          <div>
+            <div class="install-code">
+              <code class="language-javascript"
+                >npm i &#64;dev.spot/css-fusion</code
+              >
+            </div>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <h3>Import the Module</h3>
+          </ng-template>
+          <div>
+            <p>In your app.module.ts or any custom module:</p>
+            <div class="install-code">
+              <pre><code class="language-javascript">
+  import &#123; CssFusionModule &#125; from &#64;dev.spot/css-fusion;
+      
+  &#64;NgModule(&#123;
+    &nbsp;&nbsp;imports: &#91;CssFusionModule&#93;
+  &#125;)
+      
+  export class YourModuleName &#123;&#125;
+  </code></pre>
+            </div>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>
+            <h3>Include the Styles</h3>
+          </ng-template>
+          <div>
+            <p>In your styles.scss:</p>
+            <div class="install-code">
+              <code class="language-javascript"
+                >&#64;import
+                "&#64;dev.spot/css-fusion/src/lib/scss/main.scss";</code
+              >
+            </div>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+</section>

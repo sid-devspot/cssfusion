@@ -1,0 +1,49 @@
+:host {
+  --navbar-curv: 10px;
+  --navbar-bg: rgba(255, 255, 255, 0.05);
+  --navbar-bg-set01: transparent;
+  --navbar-bg-set02: transparent;
+  --navbar-bg-set03: transparent;
+  --navbar-font: #ffffff;
+  --navbar-font-set01: #ffffff;
+  --navbar-font-set02: #ffffff;
+  --navbar-font-set03: #ffffff;
+  --navbar-bdr-full: #ffffff20;
+  --navbar-bdr-set01: transparent;
+  --navbar-bdr-set02: transparent;
+  --navbar-bdr-set03: transparent;
+  --navbar-menu-icons: #bbbbbb;
+  --navbar-seperater: #ffffff20;
+  --menubar-bg: rgba(255, 255, 255, 0.05);
+  --menubar-bdr: #ffffff20;
+  --menubar-curv: 10px;
+  --menubar-logo-name: #ffffff;
+  --menubar-icons: #ffffff;
+  --menubar-profile-title: #ffffff;
+  --menubar-profile-content: #e3e3e3;
+  --navbar-trigger-font: #ffffff;
+  --navbar-menu-title: #e3e3e3;
+}
+
+.template-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+
+  main {
+    border: 1px solid var(--app-header-bdr);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.116);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+.neon-flow {
+  width: 100%;
+}
+
+.app-content {
+  padding: 20px;
+}

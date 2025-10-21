@@ -1,0 +1,112 @@
+#app-main {
+  background-color: var(--app-bg-clr);
+  color: var(--app-font-clr);
+  overflow: hidden;
+
+  a {
+    color: var(--app-font-clr);
+    font-weight: 500;
+  }
+
+  #app-header {
+    background-color: var(--app-header-bg);
+    border-bottom: 1px solid var(--app-header-bdr);
+    height: var(--layout-adjustment);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: relative;
+
+    .app-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 500;
+      gap: 0.4rem;
+    }
+
+    .app-header-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      a {
+        text-decoration: none;
+        color: var(--list-card-font);
+      }
+
+      .app-module-active {
+        color: var(--app-active-link);
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -2.6rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          height: 0.3rem;
+          border-radius: 10rem;
+          background-color: var(--app-active-link);
+        }
+      }
+    }
+
+    .app-header-btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1.8rem;
+
+      .app-header-btn {
+        background-color: var(--app-btn-bg);
+        color: var(--app-btn-font);
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 0.6rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+      }
+
+      .material-symbols-outlined {
+        cursor: pointer;
+      }
+
+      .app-menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // #app-header.scrolled {
+  //   border-bottom: 1px solid #e0e0e0;
+  // }
+
+  #app-body {
+    height: calc(100dvh - var(--layout-adjustment));
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #app-main {
+    .app-header-links {
+      display: none !important;
+    }
+
+    .app-menu-icon {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,1 +1,579 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './../node_modules/@dev.spot/css-fusion-g/dist/cssfusion-g/css/cssfusion-g.min.css' as *;
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// Custom
+@font-face {
+  font-family: 'Agdasima-Regular';
+  src: url('./../public/fonts/Agdasima-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agdasima-Bold';
+  src: url('./../public/fonts/Agdasima-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+:root {
+  --layout-adjustment: 7rem;
+  --app-theme-clr: #117ee5;
+  --app-head-font: 'Agdasima-Bold';
+  --app-content-font: 'Poppins', sans-serif;
+  --app-header-bg: #ffffff;
+  --app-header-bdr: #e0e0e0;
+  --app-bg-clr: #fafafa;
+  --app-font-clr: #000;
+  --app-sub-font-clr: #000;
+  --app-active-link: var(--app-theme-clr);
+  --app-btn-bg: var(--app-theme-clr);
+  --app-btn-font: #ffffff;
+  --app-theme-dark-bg: var(--app-theme-clr);
+  --app-theme-dark-font: #ffffff;
+  --app-theme-light-bg: #ebf3f9;
+  --app-theme-light-font: var(--app-theme-clr);
+  --list-card-bg: #fafafa;
+  --list-card-bdr: #e0e0e0;
+  --list-card-font: #898989;
+  --sidenav-bg: #ffffff;
+  --sidenav-bdr: #e0e0e0;
+  --sidenav-font: #ac9f9f;
+  --stepper-number-active-bg: var(--app-theme-clr);
+
+  // Package
+  --app-layout-height: 80dvh;
+}
+
+.light-mode {
+  --app-header-bg: #ffffff;
+  --app-header-bdr: #e0e0e0;
+  --app-bg-clr: #fafafa;
+  --app-font-clr: #000;
+  --app-btn-font: #ffffff;
+  --list-card-bg: #ffffff;
+  --list-card-bdr: #e0e0e0;
+  --sidenav-bg: #ffffff;
+  --sidenav-bdr: #e0e0e0;
+  --sidenav-font: #ac9f9f;
+  --stepper-number-bg: #737373;
+}
+
+.dark-mode {
+  --app-header-bg: #020408;
+  --app-header-bdr: #3c434c;
+  --app-bg-clr: #0c1116;
+  --app-font-clr: #ffffff;
+  --list-card-bg: #121212;
+  --list-card-bdr: #3c434c;
+  --sidenav-bg: #000;
+  --sidenav-bdr: #3c434c;
+  --sidenav-font: #ac9f9f;
+  --stepper-number-bg: #303540;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-content-font);
+}
+
+// Material Overight
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-head-font) !important;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-content-font);
+}
+
+.mat-mdc-menu-item-text {
+  font-family: var(--app-content-font) !important;
+  font-weight: 500 !important;
+  font-size: 1.4rem !important;
+}
+
+.mat-mdc-menu-item {
+  min-height: 44px !important;
+}
+
+.cdk-overlay-pane {
+  margin-top: 10px !important;
+}
+
+.mat-ripple,
+.mat-step-header-ripple,
+.mat-focus-indicator,
+.mat-step-header {
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+
+.mat-stepper-vertical,
+.mat-stepper-horizontal {
+  background-color: transparent !important;
+}
+
+.mat-step-text-label {
+  color: var(--app-font-clr) !important;
+}
+
+.mat-stepper-vertical-line::before {
+  border-left-color: var(--app-font-clr) !important;
+}
+
+.mat-step-icon {
+  background-color: var(--stepper-number-bg) !important;
+  color: #ffffff !important;
+}
+
+.mat-step-icon-selected {
+  background-color: var(--stepper-number-active-bg) !important;
+  color: #ffffff !important;
+}
+
+// App
+#component-container {
+  height: calc(100dvh - var(--layout-adjustment));
+  display: grid;
+  grid-template-columns: 20rem calc(100dvw - 20rem);
+  overflow: hidden;
+
+  #component-nav {
+    padding: 1.4rem 0 1.4rem 1.4rem;
+
+    .mobile-left-nav,
+    .mobile-right-nav {
+      display: none;
+    }
+
+    .component-nav-list {
+      height: 100%;
+      border: 0.1rem solid var(--sidenav-bdr);
+      background-color: var(--sidenav-bg);
+      color: var(--sidenav-font);
+      border-radius: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+      padding: 2.4rem 2.2rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.8rem;
+      color: var(--list-card-font);
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      .material-symbols-outlined {
+        border: 0.14rem solid var(--list-card-bdr);
+        background-color: var(--list-card-bg);
+        width: 2.4rem;
+        height: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        border-radius: 0.4rem;
+      }
+    }
+
+    .component-nav-active {
+      position: relative;
+      color: var(--app-active-link);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-top: 0.2rem solid var(--app-active-link);
+        border-right: 0.2rem solid var(--app-active-link);
+        background-color: transparent;
+        transform: translateY(-50%) rotate(44deg);
+      }
+    }
+  }
+
+  #app-components {
+    height: calc(100dvh - var(--layout-adjustment));
+    padding: 0 2.8rem;
+    overflow-y: auto;
+
+    .app-intro-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 2rem 0;
+
+      .card-header {
+        text-align: center;
+
+        h3 {
+          font-size: 3.8rem;
+          line-height: 4rem;
+          margin-bottom: 1.4rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+          font-weight: 500;
+          margin-bottom: 4rem;
+        }
+      }
+
+      .card-body {
+        width: 100%;
+        max-width: 70rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .app-components-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      padding: 2rem 0;
+    }
+
+    .app-components-box-nav {
+      width: 100%;
+      height: calc(100dvh - 7rem) !important;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 4rem;
+    }
+  }
+}
+
+.app-card {
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .card-header-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .clr-blocks {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.4rem;
+      }
+
+      .clr-green {
+        background-color: rgb(1, 157, 157);
+      }
+
+      .clr-yellow {
+        background-color: rgb(250, 175, 0);
+      }
+
+      .clr-orange {
+        background-color: rgb(255, 90, 31);
+      }
+
+      .clr-blue {
+        background-color: rgb(15, 85, 235);
+      }
+
+      .clr-violet {
+        background-color: rgb(127, 54, 221);
+      }
+
+      .clr-gray {
+        background-color: rgb(159, 159, 159);
+      }
+    }
+  }
+}
+
+.code-box {
+  width: 100%;
+  border: 0.1rem solid var(--list-card-bdr);
+  background-color: var(--list-card-bg);
+  border-radius: 1rem;
+  margin-top: 1.8rem;
+  overflow: hidden;
+
+  header {
+    background-color: var(--app-bg-clr);
+    border-bottom: 0.1rem solid var(--list-card-bdr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.8rem;
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.6rem;
+
+      .material-symbols-outlined {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  pre[class*='language-'] {
+    padding: 0 1.8rem;
+    margin: 0;
+    overflow: auto !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: pre;
+  }
+
+  code {
+    color: var(--app-font-clr);
+    display: block;
+    min-width: 100%;
+  }
+
+  code[class*='language-'],
+  pre[class*='language-'] {
+    text-shadow: none;
+  }
+
+  &:not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background: transparent !important;
+  }
+}
+
+#template-container {
+  height: calc(100dvh - var(--layout-adjustment));
+  padding-top: 4rem;
+  overflow: hidden;
+
+  #template-header {
+    height: 9rem;
+    padding: 0 4rem;
+
+    h2 {
+      font-size: 3.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  #template-list {
+    height: calc(100dvh - var(--layout-adjustment) - 13rem);
+    padding: 0 4rem 4rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    align-items: center;
+    justify-content: start;
+    gap: 4rem;
+    overflow: auto;
+
+    a {
+      height: 28rem;
+      background-color: var(--list-card-bg);
+      color: var(--list-card-font);
+      border: 0.1rem solid var(--list-card-bdr);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}
+
+#motion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 810px) {
+  #component-container {
+    height: calc(100dvh - 6rem);
+    display: grid;
+    grid-template-columns: 100dvw;
+    grid-template-rows: 9rem 1fr;
+    overflow: hidden;
+
+    #component-nav {
+      border-bottom: 1px solid var(--app-header-bdr);
+      padding: 1.4rem 5rem !important;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-left-nav,
+      .mobile-right-nav {
+        background-color: transparent;
+        border: none;
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .material-symbols-outlined {
+          font-size: 3.8rem;
+          color: var(--sidenav-font);
+        }
+      }
+
+      .mobile-left-nav {
+        left: 1rem;
+      }
+
+      .mobile-right-nav {
+        right: 1rem;
+      }
+
+      .component-nav-list {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2.8rem;
+        padding: 2.4rem 2.2rem;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      a {
+        flex-shrink: 1;
+      }
+
+      .component-nav-active {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    #app-components {
+      height: calc(100dvh - 15rem);
+      padding: 0 2.8rem;
+      overflow-y: scroll;
+
+      .app-components-box-nav {
+        flex-direction: column !important;
+
+        nav {
+          height: calc(100dvh - 15rem) !important;
+        }
+      }
+    }
+  }
+}

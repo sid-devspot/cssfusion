@@ -1,0 +1,24 @@
+<section id="component-container">
+  <nav id="component-nav">
+    <button type="button" class="mobile-left-nav" (click)="scrollNav('left')">
+      <span class="material-symbols-outlined"> arrow_left </span>
+    </button>
+    <button type="button" class="mobile-right-nav" (click)="scrollNav('right')">
+      <span class="material-symbols-outlined"> arrow_right </span>
+    </button>
+    <div class="component-nav-list" #navList>
+      <a
+        *ngFor="let data of componentList"
+        [routerLink]="data.router"
+        routerLinkActive="component-nav-active"
+      >
+        <span class="material-symbols-outlined">{{ data.icon }}</span>
+        {{ data.text }}
+      </a>
+    </div>
+  </nav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</section>

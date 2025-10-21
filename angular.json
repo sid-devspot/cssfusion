@@ -36,7 +36,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.scss", "node_modules/prismjs/themes/prism.css"],
+            "scripts": [
+              "node_modules/@dev.spot/css-fusion-g/dist/cssfusion-g/js/cssfusion-g.umd.js"
+            ]
           },
           "configurations": {
             "production": {

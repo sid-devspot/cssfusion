@@ -1,0 +1,25 @@
+<div *ngIf="showCode === 'typeEffect'">
+  <div class="code-box">
+    <header>
+      <p>Html</p>
+      <button
+        class="code-copy"
+        matTooltip="copy"
+        (click)="copyCode(typeEffect)"
+      >
+        <span class="material-symbols-outlined"> file_copy </span>
+      </button>
+    </header>
+    <div class="code-box-container">
+      <pre class="line-numbers">
+<code class="language-html" #typeEffect>
+&lt;div libTypewriter class="type-effect"&gt;
+  This is a large paragraph that will be typed character by character with
+  proper line wrapping as needed. The animation looks natural and works
+  well even for long paragraphs of text.
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</div>
