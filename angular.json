@@ -26,7 +26,7 @@
           "options": {
             "browser": "src/main.ts",
             "outputPath": "docs/",
-            "baseHref": "/cssfusion",
+            "baseHref": "/cssfusion/",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
