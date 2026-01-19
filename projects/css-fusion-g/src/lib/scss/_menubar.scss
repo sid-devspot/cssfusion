@@ -1,0 +1,220 @@
+@use 'variables' as *;
+
+.menubar-box {
+  background-color: var(--menubar-bg);
+  border-bottom: 1.6px solid var(--menubar-bdr);
+  width: 100%;
+  height: var(--menubar-height);
+  display: grid;
+  grid-template-columns: var(--menubar-set01-size) 1fr var(--menubar-set03-size);
+  padding: 0 28px;
+  border-radius: var(--menubar-curv);
+
+  .menubar-set-01 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .menubar-logo {
+      width: var(--menubar-logo-size);
+      display: block;
+    }
+
+    .menubar-logo-name {
+      color: var(--menubar-logo-name);
+    }
+  }
+
+  .menubar-set-02 {
+    margin: auto 0;
+
+    .menubar-link {
+      font-family: var(--me-font-content);
+      color: var(--menubar-link) !important;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .menubar-link-center {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .menubar-link-left {
+      border-left: 2px solid var(--menubar-links-bdr);
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start !important;
+      gap: 14px;
+      padding-left: 20px;
+    }
+
+    .menubar-link-right {
+      border-right: 2px solid var(--menubar-links-bdr);
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end !important;
+      gap: 14px;
+      padding-right: 20px;
+    }
+
+    .active-link {
+      background-color: var(--menubar-active-bg) !important;
+      color: var(--menubar-active-text) !important;
+    }
+  }
+
+  .menubar-set-03 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+.menubar-resizable {
+  background-color: var(--menubar-bg);
+  border-bottom: 0.1rem solid var(--menubar-bdr);
+  width: 100%;
+  height: var(--menubar-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-radius: var(--menubar-curv);
+
+  .menubar-set-01 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .menubar-logo {
+      width: var(--menubar-logo-size);
+      display: block;
+    }
+
+    .menubar-logo-name {
+      color: var(--menubar-logo-name);
+    }
+  }
+
+  .menubar-set-02 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    .menubar-icons {
+      font-size: 28px;
+      color: var(--menubar-icons);
+    }
+
+    .menubar-profile-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+
+      .profile-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .profile-name {
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: 500;
+          color: var(--menubar-profile-title);
+        }
+
+        .profile-role {
+          color: var(--menubar-profile-content);
+        }
+      }
+    }
+  }
+}
+
+#menubar-thumb {
+  font-size: 26px;
+  color: var(--menubar-thumb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menubar-trigger {
+  display: none !important;
+}
+
+.menubar-lined {
+  border: 1.6px solid var(--menubar-bdr) !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .menubar-trigger {
+    display: block !important;
+  }
+
+  .menubar-box {
+    grid-template-columns: var(--menubar-set01-size) var(--menubar-set03-size);
+    justify-content: space-between;
+    position: relative;
+
+    .menubar-set-02 {
+      display: none;
+    }
+  }
+
+  .menubar-open {
+    .menubar-set-02 {
+      display: block !important;
+      border: 1px solid var(--menubar-links-bdr);
+      background-color: #fafafa;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 20px;
+      margin: unset;
+
+      .menubar-link-center {
+        height: fit-content;
+        flex-direction: column;
+      }
+
+      .menubar-link-left {
+        border: none;
+        flex-direction: column;
+      }
+
+      .menubar-link-right {
+        border: none;
+        flex-direction: column;
+      }
+
+      .menubar-link {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .active-link {
+        background-color: var(--menubar-active-bg) !important;
+        color: var(--menubar-active-text) !important;
+      }
+    }
+  }
+}

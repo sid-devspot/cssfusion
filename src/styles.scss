@@ -1,5 +1,7 @@
 @use '@angular/material' as mat;
-@use './../node_modules/@dev.spot/css-fusion-g/dist/cssfusion-g/css/cssfusion-g.min.css' as *;
+// @use './../node_modules/@dev.spot/css-fusion-g/dist/cssfusion-g/css/cssfusion-g.min.css' as *;
+// "node_modules/@dev.spot/css-fusion-g/dist/cssfusion-g/js/cssfusion-g.umd.js",
+@use './../projects/css-fusion-g/src/lib/scss/main.scss' as *;
 
 html {
   @include mat.theme(

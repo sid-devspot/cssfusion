@@ -96,6 +96,33 @@
           }
         }
       }
+    },
+    "css-fusion-g": {
+      "projectType": "library",
+      "root": "projects/css-fusion-g",
+      "sourceRoot": "projects/css-fusion-g/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/css-fusion-g/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/css-fusion-g/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/css-fusion-g/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
     }
   }
 }

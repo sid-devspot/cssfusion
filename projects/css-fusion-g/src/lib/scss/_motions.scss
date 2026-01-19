@@ -1,0 +1,31 @@
+@use "variables" as *;
+
+.type-effect {
+  font-size: var(--typeeffect-font-size);
+  line-height: var(--typeeffect-font-height);
+  color: var(--typeeffect-font-clr);
+  background-color: var(--typeeffect-font-bg);
+  font-family: var(--font-type-style) !important;
+  font-weight: var(--typeeffect-font-weight);
+  white-space: normal;
+  display: inline-block;
+  position: relative;
+}
+
+.type-effect::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: var(--typeeffect-font-height);
+  background-color: var(--typeeffect-caret-clr);
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  vertical-align: bottom;
+  position: absolute;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
